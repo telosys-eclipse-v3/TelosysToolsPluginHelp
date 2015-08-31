@@ -1,0 +1,83 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<title>Getting Started</title>
+</head>
+
+<body>
+<h1>Getting Started</h1>
+
+To use this plugin you need :
+<ul>
+<li>A database (started and ready to accept connections)</li>
+<li>A project in the Eclipse workspace (Java project or other)</li>
+<li>The jar file containing the JDBC driver for database connection.</li>
+</ul>
+For a full documentation see the web site : <a href="https://sites.google.com/site/telosystools/" >https://sites.google.com/site/telosystools/</a><br>
+<br>
+The main steps are described bellow : <br>
+<!-- ========== -->
+<h2>Configure the project</h2>
+Right-click at the root of the project and select <b>"Properties" - "Telosys Tools"</b><br>
+<br>
+In the "Telosys Tools" properties windows you can ...
+<ul>
+<li>Define the project's folders</li>
+<li>Initialize the environment by creating the required folders and files</li>
+<li>Download predefined templates from GitHub</li>
+<li>Define the specific variables used in your templates</li>
+<li>etc</li>
+</ul>
+
+<!-- ========== -->
+<h2>Configure the database connection and generate the repository</h2>
+Before trying to connect to a database you must have the JDBC driver.<br>
+The JAR file can be located either in the <b>Telosys Tools library folder</b> (usually "TelosysTools/lib")  <br>
+or in the <b>project class path</b> if it's a Java project.<br>
+<br>
+To define a new database, open the <b>"databases.dbcfg"</b> <br>
+Just double-click on the file to open the databases configuration editor. <br>
+Here you can : <br>
+. Define a new database with its JDBC configuration <br>
+. Test the connection <br>
+. Check that all the expected meta-data can be retrieved <br>
+<br>
+When everything works correctly, save the file.<br>
+<br>
+Finally you can <b>generate a new repository</b> (or later update an existing repository).<br>
+
+<!-- ========== -->
+<h2>Customize the repository</h2>
+Open the generated repository (".dbrep" file) <br>
+and customize it if necessary with the editor
+
+<!-- ========== -->
+<h2>Get templates and launch generation</h2>
+Right-click at the root of the project and select <b>"Properties" - "Telosys Tools"</b><br>
+Select the <b>"Download"</b> tab <br>
+Get the templates bundles available on GitHub and download/install the bundle of your choice<br>
+( the installed bundles are located in the "TelosysTools/templates" folder )
+<br>
+Once the templates bundle is ready you can generate the targets entity by entity <br>
+or use the "bulk generation" page to launch a batch generation for multiple entities<br>
+<br>
+In the repository editor refresh the bundles list with the "Refresh" button<br>
+Select the bundle you want to use, select the entities and the targets
+and click on the "Generate" button<br>
+The templates/targets of each bundle are defined in the "templates.cfg" file 
+(a text file that can be edited from the repository editor)<br>
+
+<!-- ========== -->
+<h2>Create your own targets/templates</h2>
+To create a new generation target (a new kind of file to be generated) <br>
+<ul>
+<li> Create a new template file (usually copy an existing .vm file and change it)</li>
+<li> Declare the new target with its template and destination folder in "templates.cfg"</li>
+<li> Refresh the targets list and use it...</li>
+</ul>
+<br>
+<br>
+<br>
+</body>
+</html>

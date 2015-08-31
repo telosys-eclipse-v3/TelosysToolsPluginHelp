@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+	<extension point="org.eclipse.help.toc">
+  
+  		<!--- Table Of Content 
+  		The toc entry which has the primary="true" flag set will be treaded as a main entry in the help, 
+  		all others will be treated as subtopics. 
+  		Topics not flagged as "primary" will not show up in the help hierarchy 
+  		unless they are linked to from at least one primary toc file. 
+  		-->
+		<toc file="TelosysToolsHelpTOC.xml" primary="true">
+		</toc>
+		
+	</extension>
+	
+	<extension point="org.eclipse.help.contexts">
+		<!-- Contextual Help definition -->
+		<contexts file="TelosysToolsHelpCONTEXTS.xml" />
+	</extension>
+
+</plugin>
