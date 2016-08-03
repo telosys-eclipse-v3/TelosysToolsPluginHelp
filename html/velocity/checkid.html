@@ -2,7 +2,7 @@
 <html>								
 <head>								
 	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">	
-	<title> $h2</title>	
+	<title> #assertFalse </title>	
 	<style type="text/css">		
 	h1 {							
 		font-size:28px;				
@@ -38,36 +38,23 @@
 	}								
 	</style>						
 </head>							
-<body>											
-<h1> $h2</h1>	
+<body>					
+						
+<h1> #checkId </h1>	
 <p class="desc">								
-Object providing a set of functions for the H2 database<br>
+<strong>( specific directive - since version 3.0.0 )</strong><br>
 <br>
+Checks the existence of ID/Primary Key in the given entity<br>
+Throws an error if there's no ID/Primary Key defined in the entity<br>
 <br>
-Since : 2.1.1<br>
-</p>		
-<table width="100%" border="1" cellspacing="0">		
-<TR class="title">										
-  <TD>Attributes and methods</TD>			
-</TR>		
-<TR>
-<TD class="doc" ><CODE class="simpledesc"> <B>.ddlCreateTable(EntityInContext entity) : List<String></B> </CODE>
-<p class="doc">
-Returns the 'CREATE TABLE' DDL statement for the given entity<br>
-The DDL statement is splitted in a list of lines <br>
+<b>Examples : </b><br>
 <br>
-<b>Parameters : </b><br>
-&nbsp;&nbsp;&nbsp;<b>entity</b> : the entity<br>
-<br>
-<b>Example : </b><br>
 <code>
-&nbsp;&nbsp;&nbsp;$h2.ddlCreateTable($entity) <br>
-</code>
+&nbsp;&nbsp;&nbsp; #checkId( $entity) <br>
 <br>
-<b>Since : </b>2.1.1<br>
-</p>
-</TD>
-</TR>
-</table>
+</code>
+</p>		
+<br>
+<br>
 </body>
 </html>

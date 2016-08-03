@@ -1,38 +1,39 @@
---- NEW ---
 
-1) Generate the HTML files
+--------------------------------------------------------------------------------------------------
+-- How to update the generator context object
+--------------------------------------------------------------------------------------------------
 
-  Run DocGeneratorLauncher.java
-  Refresh project / Eclipse --> "F5"
-  Check result in "html/objects"
+ 1) Update Java dependencies (use the last version of TelosysTools jar files )
 
-2) Update files referencing the generated files 
+   Update ANT file : build_copy_jars.xml
+   Copy JARs
+   Update project's referenced libraries
 
- . html/templates-objects.html
- . TelosysToolsHelpCONTEXTS.xml
- . TelosysToolsHelpTOC.xml
+
+ 2) Generate the HTML files
+
+   Run DocGeneratorLauncher.java
+   Refresh project / Eclipse --> "F5"
+   Check result in "html/objects"
+
+
+ 3) Update files referencing the generated files 
+
+  . html/templates-objects.html
+  . TelosysToolsHelpCONTEXTS.xml
+  . TelosysToolsHelpTOC.xml
  
 --------------------------------------------------------------------------------------------------
---- OLD ---
-1) Generate the HTML files
+-- How to update the generator directives
+--------------------------------------------------------------------------------------------------
 
-  In project "telosys-generator"
-  Delete "/target/doc/"
-  Class "org.telosys.tools.generator.context.doc.DocGenerator" --> Run As Java Application
-  HTML files are generated in "/target/doc/"
-  Refresh / Eclipse --> "F5"
-
-
-2) Copy generated HTML files 
-  In project "TelosysToolsPluginHelp"
-  ANT --> build_copy_doc.xml
-  
-  
-3) Update files referencing the generated files 
-
- . html/templates-objects.html
+ The directive documentation must be edited by hand
+ 
+ Create/update the html file in "html/velocity"
+ 
+ Update the reference in the following files if necessary :
+ . html/templates-language.html
  . TelosysToolsHelpCONTEXTS.xml
  . TelosysToolsHelpTOC.xml
- 
 
  

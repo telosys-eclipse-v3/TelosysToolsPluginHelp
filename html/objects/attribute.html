@@ -173,7 +173,9 @@ Returns the attribute's type with n trailing blanks <br>
 <TR>
 <TD class="doc" ><CODE class="simpledesc"> <B>.fullType : String</B> </CODE>
 <p class="doc">
-Returns the full type ( java.math.BigDecimal, java.util.Date, .. )<br>
+Returns the full type name<br>
+e.g. for a Java object type : java.math.BigDecimal, java.util.Date,  .. <br>
+  or for a Java primitive type : short, int, .. <br>
 </p>
 </TD>
 </TR>
@@ -206,106 +208,6 @@ e.g : 'getFoo' for 'foo' (or 'isFoo' for a boolean primitive type)<br>
 <p class="doc">
 Returns the getter for the attribute with always a 'get' prefix<br>
 even for a boolean<br>
-</p>
-</TD>
-</TR>
-<TR>
-<TD class="doc" ><CODE class="simpledesc"> <B>.guiMaxLength : String</B> </CODE>
-<p class="doc">
-Returns maximum input length to be used in the GUI <br>
-For string types the specific maximum lenght is returned ( or void if not defined )<br>
-For numeric types the maximum lenght depends on the type ( 4 for 'byte', 11 for 'int', etc... ) <br>
-For 'date' 10, for 'time' 8<br>
-</p>
-</TD>
-</TR>
-<TR>
-<TD class="doc" ><CODE class="simpledesc"> <B>.guiMaxLengthAttribute : String</B> </CODE>
-<p class="doc">
-Returns the GUI 'maxlength' attribute (or void if none) <br>
-e.g 'maxlength=12' <br>
-</p>
-</TD>
-</TR>
-<TR>
-<TD class="doc" ><CODE class="simpledesc"> <B>.guiMaxLengthAttribute() : String</B> </CODE>
-<p class="doc">
-Returns the GUI 'maxlength' attribute (or void if none) <br>
-e.g 'maxlength=12' <br>
-</p>
-</TD>
-</TR>
-<TR>
-<TD class="doc" ><CODE class="simpledesc"> <B>.guiMaxLengthAttribute(String guiAttributeName) : String</B> </CODE>
-<p class="doc">
-Returns the GUI specific attribute for maximum length (or void if none) <br>
-e.g 'myattribute=12' for guiMaxLengthAttribute('myattribute') <br>
-<br>
-<b>Parameters : </b><br>
-&nbsp;&nbsp;&nbsp;<b>guiAttributeName</b> : the name of the attribute to be set in the GUI<br>
-</p>
-</TD>
-</TR>
-<TR>
-<TD class="doc" ><CODE class="simpledesc"> <B>.guiMinMaxAttributes : String</B> </CODE>
-<p class="doc">
-Returns the GUI attributes for minimum and maximum values (or void if none)<br>
-e.g 'min=10 max=20' <br>
-</p>
-</TD>
-</TR>
-<TR>
-<TD class="doc" ><CODE class="simpledesc"> <B>.guiMinMaxAttributes() : String</B> </CODE>
-<p class="doc">
-Returns the GUI attributes for minimum and maximum values (or void if none)<br>
-e.g 'min=10 max=20' <br>
-</p>
-</TD>
-</TR>
-<TR>
-<TD class="doc" ><CODE class="simpledesc"> <B>.guiMinMaxAttributes(String guiMinAttributeName, String guiMaxAttributeName) : String</B> </CODE>
-<p class="doc">
-Returns the GUI specific attribute for minimum and maximum values (or void if none) <br>
-e.g 'mini=10 maxi=20' for guiMaxLengthAttribute('mini', 'maxi') <br>
-<br>
-<b>Parameters : </b><br>
-&nbsp;&nbsp;&nbsp;<b>guiMinAttributeName</b> : the name of the MIN attribute to be set in the GUI<br>
-&nbsp;&nbsp;&nbsp;<b>guiMaxAttributeName</b> : the name of the MAX attribute to be set in the GUI<br>
-</p>
-</TD>
-</TR>
-<TR>
-<TD class="doc" ><CODE class="simpledesc"> <B>.guiType : String</B> </CODE>
-<p class="doc">
-Returns the GUI type if any (else returns a void string)<br>
-e.g 'int', 'num', 'date', 'time', '' <br>
-</p>
-</TD>
-</TR>
-<TR>
-<TD class="doc" ><CODE class="simpledesc"> <B>.guiTypeAttribute : String</B> </CODE>
-<p class="doc">
-Returns the GUI type attribute <br>
-e.g : type='int' <br>
-</p>
-</TD>
-</TR>
-<TR>
-<TD class="doc" ><CODE class="simpledesc"> <B>.guiTypeAttribute() : String</B> </CODE>
-<p class="doc">
-Returns the GUI type attribute <br>
-e.g : type='int' <br>
-</p>
-</TD>
-</TR>
-<TR>
-<TD class="doc" ><CODE class="simpledesc"> <B>.guiTypeAttribute(String guiTypeAttributeName) : String</B> </CODE>
-<p class="doc">
-Returns the GUI type attribute <br>
-e.g : type='int' <br>
-<br>
-<b>Parameters : </b><br>
-&nbsp;&nbsp;&nbsp;<b>guiTypeAttributeName</b> : name of the TYPE attribute to be set in the GUI<br>
 </p>
 </TD>
 </TR>
@@ -392,15 +294,6 @@ Typically for HTML 5 : 'number', 'date', ...<br>
 </TD>
 </TR>
 <TR>
-<TD class="doc" ><CODE class="simpledesc"> <B>.isArrayType() : boolean</B> </CODE>
-<p class="doc">
-Returns TRUE if the attribute's type is a Java array ( byte[], String[], ... )<br>
-<br>
-<b>Since : </b>2.0.7<br>
-</p>
-</TD>
-</TR>
-<TR>
 <TD class="doc" ><CODE class="simpledesc"> <B>.isAutoIncremented() : boolean</B> </CODE>
 <p class="doc">
 Returns TRUE if the attribute is 'auto-incremented' by the database<br>
@@ -409,27 +302,18 @@ when a new entity is inserted in the database<br>
 </TD>
 </TR>
 <TR>
-<TD class="doc" ><CODE class="simpledesc"> <B>.isBigDecimalType() : boolean</B> </CODE>
+<TD class="doc" ><CODE class="simpledesc"> <B>.isBinaryType() : boolean</B> </CODE>
 <p class="doc">
-Returns TRUE if the attribute's type is a Java 'BigDecimal' type<br>
+Returns TRUE if the attribute's neutral type is 'binary' <br>
 <br>
-<b>Since : </b>2.0.7<br>
-</p>
-</TD>
-</TR>
-<TR>
-<TD class="doc" ><CODE class="simpledesc"> <B>.isBlobType() : boolean</B> </CODE>
-<p class="doc">
-Returns TRUE if the attribute's type is a Java 'Blob' type<br>
-<br>
-<b>Since : </b>2.0.7<br>
+<b>Since : </b>3.0.0<br>
 </p>
 </TD>
 </TR>
 <TR>
 <TD class="doc" ><CODE class="simpledesc"> <B>.isBooleanType() : boolean</B> </CODE>
 <p class="doc">
-Returns TRUE if the attribute's type is a Java 'boolean/Boolean' type<br>
+Returns TRUE if the attribute's neutral type is'boolean' <br>
 <br>
 <b>Since : </b>2.0.7<br>
 </p>
@@ -438,16 +322,7 @@ Returns TRUE if the attribute's type is a Java 'boolean/Boolean' type<br>
 <TR>
 <TD class="doc" ><CODE class="simpledesc"> <B>.isByteType() : boolean</B> </CODE>
 <p class="doc">
-Returns TRUE if the attribute's type is a Java 'byte/Byte' type<br>
-<br>
-<b>Since : </b>2.0.7<br>
-</p>
-</TD>
-</TR>
-<TR>
-<TD class="doc" ><CODE class="simpledesc"> <B>.isClobType() : boolean</B> </CODE>
-<p class="doc">
-Returns TRUE if the attribute's type is a Java 'Clob' type<br>
+Returns TRUE if the attribute's neutral type is 'byte' <br>
 <br>
 <b>Since : </b>2.0.7<br>
 </p>
@@ -461,9 +336,27 @@ Returns TRUE if the attribute must be NOT NULL when stored in the database<br>
 </TD>
 </TR>
 <TR>
+<TD class="doc" ><CODE class="simpledesc"> <B>.isDateType() : boolean</B> </CODE>
+<p class="doc">
+Returns TRUE if the attribute's neutral type is 'date' <br>
+<br>
+<b>Since : </b>3.0.0<br>
+</p>
+</TD>
+</TR>
+<TR>
+<TD class="doc" ><CODE class="simpledesc"> <B>.isDecimalType() : boolean</B> </CODE>
+<p class="doc">
+Returns TRUE if the attribute's neutral type is 'decimal' <br>
+<br>
+<b>Since : </b>3.0.0<br>
+</p>
+</TD>
+</TR>
+<TR>
 <TD class="doc" ><CODE class="simpledesc"> <B>.isDoubleType() : boolean</B> </CODE>
 <p class="doc">
-Returns TRUE if the attribute's type is a Java 'double/Double' type<br>
+Returns TRUE if the attribute's neutral type is 'double' <br>
 <br>
 <b>Since : </b>2.0.7<br>
 </p>
@@ -472,7 +365,7 @@ Returns TRUE if the attribute's type is a Java 'double/Double' type<br>
 <TR>
 <TD class="doc" ><CODE class="simpledesc"> <B>.isFloatType() : boolean</B> </CODE>
 <p class="doc">
-Returns TRUE if the attribute's type is a Java 'float/Float' type<br>
+Returns TRUE if the attribute's neutral type is 'float' <br>
 <br>
 <b>Since : </b>2.0.7<br>
 </p>
@@ -490,7 +383,7 @@ or generated by the persistence layer (typically by JPA)<br>
 <TR>
 <TD class="doc" ><CODE class="simpledesc"> <B>.isIntegerType() : boolean</B> </CODE>
 <p class="doc">
-Returns TRUE if the attribute's type is a Java 'int/Integer' type<br>
+Returns TRUE if the attribute's neutral type is 'int' <br>
 <br>
 <b>Since : </b>2.0.7<br>
 </p>
@@ -515,7 +408,7 @@ Typically a text stored as a CLOB or a BLOB<br>
 <TR>
 <TD class="doc" ><CODE class="simpledesc"> <B>.isLongType() : boolean</B> </CODE>
 <p class="doc">
-Returns TRUE if the attribute's type is a Java 'long/Long' type<br>
+Returns TRUE if the attribute's neutral type is 'long' <br>
 <br>
 <b>Since : </b>2.0.7<br>
 </p>
@@ -545,8 +438,8 @@ Returns TRUE if the attribute has a 'Not Null' validation rule <br>
 <TR>
 <TD class="doc" ><CODE class="simpledesc"> <B>.isNumberType() : boolean</B> </CODE>
 <p class="doc">
-Returns TRUE if the attribute's type is a Java number type<br>
-(byte, Byte, int, Integer, float ,Float, BigDecimal, etc... )<br>
+Returns TRUE if the attribute's neutral type is a number type<br>
+( byte, short, int, long, decimal, float, double )<br>
 <br>
 <b>Since : </b>2.0.7<br>
 </p>
@@ -555,8 +448,8 @@ Returns TRUE if the attribute's type is a Java number type<br>
 <TR>
 <TD class="doc" ><CODE class="simpledesc"> <B>.isPrimitiveType() : boolean</B> </CODE>
 <p class="doc">
-Returns TRUE if the attribute's type is a Java primitive type<br>
-i.e. int, float, boolean, ...<br>
+Returns TRUE if the attribute's language type is a primitive type<br>
+i.e. for Java : int, float, boolean, ...<br>
 </p>
 </TD>
 </TR>
@@ -580,34 +473,7 @@ Returns TRUE if the attribute is selected (ckeckbox ckecked in the GUI)<br>
 <TR>
 <TD class="doc" ><CODE class="simpledesc"> <B>.isShortType() : boolean</B> </CODE>
 <p class="doc">
-Returns TRUE if the attribute's type is a Java 'short/Short' type<br>
-<br>
-<b>Since : </b>2.0.7<br>
-</p>
-</TD>
-</TR>
-<TR>
-<TD class="doc" ><CODE class="simpledesc"> <B>.isSqlDateType() : boolean</B> </CODE>
-<p class="doc">
-Returns TRUE if the attribute's type is 'java.sql.Date' type<br>
-<br>
-<b>Since : </b>2.0.7<br>
-</p>
-</TD>
-</TR>
-<TR>
-<TD class="doc" ><CODE class="simpledesc"> <B>.isSqlTimeType() : boolean</B> </CODE>
-<p class="doc">
-Returns TRUE if the attribute's type is 'java.sql.Time' type<br>
-<br>
-<b>Since : </b>2.0.7<br>
-</p>
-</TD>
-</TR>
-<TR>
-<TD class="doc" ><CODE class="simpledesc"> <B>.isSqlTimestampType() : boolean</B> </CODE>
-<p class="doc">
-Returns TRUE if the attribute's type is 'java.sql.Timestamp' type<br>
+Returns TRUE if the attribute's neutral type is 'short' <br>
 <br>
 <b>Since : </b>2.0.7<br>
 </p>
@@ -616,7 +482,7 @@ Returns TRUE if the attribute's type is 'java.sql.Timestamp' type<br>
 <TR>
 <TD class="doc" ><CODE class="simpledesc"> <B>.isStringType() : boolean</B> </CODE>
 <p class="doc">
-Returns TRUE if the attribute's type is a Java 'String' type<br>
+Returns TRUE if the attribute's neutral type is 'string' <br>
 <br>
 <b>Since : </b>2.0.7<br>
 </p>
@@ -625,10 +491,28 @@ Returns TRUE if the attribute's type is a Java 'String' type<br>
 <TR>
 <TD class="doc" ><CODE class="simpledesc"> <B>.isTemporalType() : boolean</B> </CODE>
 <p class="doc">
-Returns TRUE if the attribute's type is a Java temporal type<br>
-( java.util.Date, java.sql.Date, java.sql.Time, java.sql.Timestamp )<br>
+Returns TRUE if the attribute's neutral type is a temporal type<br>
+( date, time, timestamp )<br>
 <br>
 <b>Since : </b>2.0.7<br>
+</p>
+</TD>
+</TR>
+<TR>
+<TD class="doc" ><CODE class="simpledesc"> <B>.isTimeType() : boolean</B> </CODE>
+<p class="doc">
+Returns TRUE if the attribute's neutral type is 'time' <br>
+<br>
+<b>Since : </b>3.0.0<br>
+</p>
+</TD>
+</TR>
+<TR>
+<TD class="doc" ><CODE class="simpledesc"> <B>.isTimestampType() : boolean</B> </CODE>
+<p class="doc">
+Returns TRUE if the attribute's neutral type is 'timestamp' <br>
+<br>
+<b>Since : </b>3.0.0<br>
 </p>
 </TD>
 </TR>
@@ -647,15 +531,6 @@ Useful for JPA, to avoid double mapping ( FK field and owning side link )<br>
 <br>
 <b>Parameters : </b><br>
 &nbsp;&nbsp;&nbsp;<b>links</b> : list of links where to search the attribute<br>
-</p>
-</TD>
-</TR>
-<TR>
-<TD class="doc" ><CODE class="simpledesc"> <B>.isUtilDateType() : boolean</B> </CODE>
-<p class="doc">
-Returns TRUE if the attribute's type is 'java.util.Date' type<br>
-<br>
-<b>Since : </b>2.0.7<br>
 </p>
 </TD>
 </TR>
@@ -724,6 +599,14 @@ Returns the name of the attribute <br>
 </TD>
 </TR>
 <TR>
+<TD class="doc" ><CODE class="simpledesc"> <B>.neutralType : String</B> </CODE>
+<p class="doc">
+Returns the 'neutral type', that is to say the type as defined in the model<br>
+e.g. : 'string', 'short', 'decimal', 'boolean', 'date', 'time', etc <br>
+</p>
+</TD>
+</TR>
+<TR>
 <TD class="doc" ><CODE class="simpledesc"> <B>.pattern : String</B> </CODE>
 <p class="doc">
 Returns the Reg Exp pattern defined for the attribute (if any, else returns void) <br>
@@ -777,7 +660,9 @@ e.g : 'setFoo' for 'foo' <br>
 <TR>
 <TD class="doc" ><CODE class="simpledesc"> <B>.simpleType : String</B> </CODE>
 <p class="doc">
-Returns the simple type ( BigDecimal, Date, int, Integer, .. )<br>
+Returns the simple type name <br>
+e.g. for a Java object type : BigDecimal, Date, Integer, .. <br>
+  or for a Java primitive type : short, int, .. <br>
 </p>
 </TD>
 </TR>
@@ -835,7 +720,7 @@ Examples for Java : 'int', 'BigDecimal', 'Date', 'java.util.Date', 'java.sql.Dat
 <TR>
 <TD class="doc" ><CODE class="simpledesc"> <B>.wrapperType : String</B> </CODE>
 <p class="doc">
-Returns the Java wrapper type corresponding to the attribute's primitive type<br>
+Returns the wrapper type corresponding to the attribute's primitive type<br>
 Examples : 'Float' for 'float', 'Integer' for 'int', 'Boolean' for 'boolean', ... <br>
 The attribute's type is retuned as is if it's not a primitive type<br>
 </p>

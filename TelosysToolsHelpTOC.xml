@@ -3,17 +3,22 @@
 
 <toc label="Telosys Tools Documentation  (.T.)" >
 
+	<!-- Removed in ver 3.0.0
 	<topic label="Getting Started"  href="html/getting-started.html"> 
+	-->
 	<!--
 		<topic label="Sub Topic" href="html/subtopic.html"/> 
 	-->
+	<!--
 	</topic>
+	-->
 
 	<topic label="Templates Language"  href="html/templates-language.html"> 
 	
 		<topic label="#assertFalse"     href="html/velocity/assertfalse.html"/>
 		<topic label="#assertTrue"      href="html/velocity/asserttrue.html"/>
 		<topic label="#error"           href="html/velocity/error.html"/>
+		<topic label="#checkId"         href="html/velocity/checkid.html"/>
 		 
 		<topic label="#foreach"         href="html/velocity/foreach.html"/> 
 		<topic label="#if"              href="html/velocity/if.html"/> 
@@ -43,6 +48,7 @@
 		<topic label="$generation"      href="html/objects/generation.html"/> 
 		<topic label="$generator"       href="html/objects/generator.html"/> 
 		<topic label="$h2"              href="html/objects/h2.html"/> 
+		<topic label="$html"            href="html/objects/html.html"/> 
 		<topic label="$java"            href="html/objects/java.html"/> 
 		<topic label="$jdbc"            href="html/objects/jdbc.html"/> 
 		<topic label="$jdbcFactory"     href="html/objects/jdbcFactory.html"/> 

@@ -321,6 +321,22 @@ Returns TRUE if the database type of the entity is 'VIEW' <br>
 </TD>
 </TR>
 <TR>
+<TD class="doc" ><CODE class="simpledesc"> <B>.keyAttribute : Instance of 'attribute' </B> </CODE>
+<p class="doc">
+Returns the unique attribute used as the Primary Key for this entity.<br>
+Throws an exception if the entity does not have a Primary Key<br>
+or if it has a composite Primary Key (2 or more attributes)<br>
+<br>
+<b>Example : </b><br>
+<code>
+&nbsp;&nbsp;&nbsp;$entity.keyAttribute<br>
+</code>
+<br>
+<b>Since : </b>3.0.0<br>
+</p>
+</TD>
+</TR>
+<TR>
 <TD class="doc" ><CODE class="simpledesc"> <B>.keyAttributes : List of 'attribute' objects</B> </CODE>
 <p class="doc">
 Returns the attributes used in the Primary Key for this entity<br>

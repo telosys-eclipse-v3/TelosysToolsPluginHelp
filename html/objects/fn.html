@@ -106,18 +106,128 @@ Returns a string containing a list of fields (type and name) separated by a comm
 </TD>
 </TR>
 <TR>
-<TD class="doc" ><CODE class="simpledesc"> <B>.buildValues(List attributes, int step) : ValuesInContext</B> </CODE>
+<TD class="doc" ><CODE class="simpledesc"> <B>.buildIntValues(Collection collection) : List<Integer></B> </CODE>
 <p class="doc">
-Builds a list of values (one value for each attribute)<br>
-Those values are usable in test cases<br>
+Builds a list of N integer consecutive values starting with 1<br>
 <br>
 <b>Parameters : </b><br>
-&nbsp;&nbsp;&nbsp;<b>attributes</b> : list of attributes requiring values<br>
+&nbsp;&nbsp;&nbsp;<b>collection</b> : the collection determining the number of values (collection size)<br>
+<br>
+<b>Example : </b><br>
+<code>
+&nbsp;&nbsp;&nbsp;#set ( $values = $fn.buildIntValues($entity.attributes) ) <br>
+&nbsp;&nbsp;&nbsp;Values size = $values.size() <br>
+&nbsp;&nbsp;&nbsp;#foreach( $v in $values )<br>
+&nbsp;&nbsp;&nbsp; . value = $v<br>
+&nbsp;&nbsp;&nbsp;#end<br>
+&nbsp;&nbsp;&nbsp;#set($last = ( $values.size() - 1) )<br>
+&nbsp;&nbsp;&nbsp;#foreach ( $i in [0..$last] )<br>
+&nbsp;&nbsp;&nbsp; . value($i) = $values.get($i)<br>
+&nbsp;&nbsp;&nbsp;#end<br>
+</code>
+<br>
+<b>Since : </b>3.0.0<br>
+</p>
+</TD>
+</TR>
+<TR>
+<TD class="doc" ><CODE class="simpledesc"> <B>.buildIntValues(Collection collection, int int) : List<Integer></B> </CODE>
+<p class="doc">
+Builds a list of N integer consecutive values starting with the given value<br>
+<br>
+<b>Parameters : </b><br>
+&nbsp;&nbsp;&nbsp;<b>collection</b> : the collection determining the number of values (collection size)<br>
+&nbsp;&nbsp;&nbsp;<b>int</b> : the first value of the list<br>
+<br>
+<b>Example : </b><br>
+<code>
+&nbsp;&nbsp;&nbsp;#set ( $values = $fn.buildIntValues($entity.attributes, 0) ) <br>
+&nbsp;&nbsp;&nbsp;Values size = $values.size() <br>
+&nbsp;&nbsp;&nbsp;#foreach( $v in $values )<br>
+&nbsp;&nbsp;&nbsp; . value = $v<br>
+&nbsp;&nbsp;&nbsp;#end<br>
+&nbsp;&nbsp;&nbsp;#set($last = ( $values.size() - 1) )<br>
+&nbsp;&nbsp;&nbsp;#foreach ( $i in [0..$last] )<br>
+&nbsp;&nbsp;&nbsp; . value($i) = $values.get($i)<br>
+&nbsp;&nbsp;&nbsp;#end<br>
+</code>
+<br>
+<b>Since : </b>3.0.0<br>
+</p>
+</TD>
+</TR>
+<TR>
+<TD class="doc" ><CODE class="simpledesc"> <B>.buildIntValues(int int) : List<Integer></B> </CODE>
+<p class="doc">
+Builds a list of N integer consecutive values starting with 1<br>
+<br>
+<b>Parameters : </b><br>
+&nbsp;&nbsp;&nbsp;<b>int</b> : the number of values to be created<br>
+<br>
+<b>Example : </b><br>
+<code>
+&nbsp;&nbsp;&nbsp;#set ( $values = $fn.buildIntValues(5) ) ## 5 values from 1 to 5<br>
+&nbsp;&nbsp;&nbsp;Values size = $values.size() <br>
+&nbsp;&nbsp;&nbsp;#foreach( $v in $values )<br>
+&nbsp;&nbsp;&nbsp; . value = $v<br>
+&nbsp;&nbsp;&nbsp;#end<br>
+&nbsp;&nbsp;&nbsp;#set($last = ( $values.size() - 1) )<br>
+&nbsp;&nbsp;&nbsp;#foreach ( $i in [0..$last] )<br>
+&nbsp;&nbsp;&nbsp; . value($i) = $values.get($i)<br>
+&nbsp;&nbsp;&nbsp;#end<br>
+</code>
+<br>
+<b>Since : </b>3.0.0<br>
+</p>
+</TD>
+</TR>
+<TR>
+<TD class="doc" ><CODE class="simpledesc"> <B>.buildIntValues(int int, int int) : List<Integer></B> </CODE>
+<p class="doc">
+Builds a list of N integer consecutive values starting with the given value<br>
+<br>
+<b>Parameters : </b><br>
+&nbsp;&nbsp;&nbsp;<b>int</b> : the number of values to be created<br>
+&nbsp;&nbsp;&nbsp;<b>int</b> : the first value of the list<br>
+<br>
+<b>Example : </b><br>
+<code>
+&nbsp;&nbsp;&nbsp;#set ( $values = $fn.buildIntValues(10,0) ) ## 10 values from 0 to 9<br>
+&nbsp;&nbsp;&nbsp;Values size = $values.size() <br>
+&nbsp;&nbsp;&nbsp;#foreach( $v in $values )<br>
+&nbsp;&nbsp;&nbsp; . value = $v<br>
+&nbsp;&nbsp;&nbsp;#end<br>
+&nbsp;&nbsp;&nbsp;#set($last = ( $values.size() - 1) )<br>
+&nbsp;&nbsp;&nbsp;#foreach ( $i in [0..$last] )<br>
+&nbsp;&nbsp;&nbsp; . value($i) = $values.get($i)<br>
+&nbsp;&nbsp;&nbsp;#end<br>
+</code>
+<br>
+<b>Since : </b>3.0.0<br>
+</p>
+</TD>
+</TR>
+<TR>
+<TD class="doc" ><CODE class="simpledesc"> <B>.buildValues(List attributes, int step) : ValuesInContext</B> </CODE>
+<p class="doc">
+Builds a list of literal values.<br>
+Returns a list with one literal value for each attribute according with the attribute type.<br>
+e.g. : 12 for an integer, true for a boolean,  230L for a long, 'ABC' for a string, etc <br>
+Each value can be retrieved by its attribute's name, e.g. $values.getValue($attribute.name)<br>
+A list of all values separated by a comma is returned by $values.allValues<br>
+Those values are typically used to populate attributes in test cases<br>
+<br>
+<b>Parameters : </b><br>
+&nbsp;&nbsp;&nbsp;<b>attributes</b> : list of attributes requiring a literal value<br>
 &nbsp;&nbsp;&nbsp;<b>step</b> : a step (from 1 to N) used to change the values builded<br>
 <br>
 <b>Example : </b><br>
 <code>
-&nbsp;&nbsp;&nbsp;$fn.buildValues($entity.attributes, 1) <br>
+&nbsp;&nbsp;&nbsp;#set( $values = $fn.buildValues($entity.attributes, 1) )<br>
+&nbsp;&nbsp;&nbsp;#foreach( $attribute in $entity.attributes )<br>
+&nbsp;&nbsp;&nbsp; Literal value for $attribute.name : $values.getValue($attribute.name)<br>
+&nbsp;&nbsp;&nbsp;#end<br>
+&nbsp;&nbsp;&nbsp; All values : $values.allValues<br>
 </code>
 <br>
 <b>Since : </b>2.1.1<br>

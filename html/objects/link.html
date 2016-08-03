@@ -90,7 +90,8 @@ eg : 'OneToMany', 'ManyToOne', 'OneToOne', 'ManyToMany'<br>
 <TR>
 <TD class="doc" ><CODE class="simpledesc"> <B>.cascade : String</B> </CODE>
 <p class="doc">
-Returns the 'cascade type' ( 'ALL', 'MERGE', 'PERSIST', 'REFRESH', 'REMOVE' )<br>
+Returns the 'cascade type' ( 'ALL', 'MERGE', 'MERGE PERSIST', 'PERSIST REFRESH', 'REMOVE' )<br>
+A string containing all the selected cascade options<br>
 </p>
 </TD>
 </TR>
@@ -225,35 +226,35 @@ Returns TRUE if the link has a 'OneToOne' cardinality<br>
 <TR>
 <TD class="doc" ><CODE class="simpledesc"> <B>.isCascadeALL() : boolean</B> </CODE>
 <p class="doc">
-Returns true if the 'cascade type' is 'ALL' <br>
+Returns true if the 'cascade options' is 'ALL' <br>
 </p>
 </TD>
 </TR>
 <TR>
 <TD class="doc" ><CODE class="simpledesc"> <B>.isCascadeMERGE() : boolean</B> </CODE>
 <p class="doc">
-Returns true if the 'cascade type' is 'MERGE' <br>
+Returns true if the 'cascade options' contains 'MERGE' <br>
 </p>
 </TD>
 </TR>
 <TR>
 <TD class="doc" ><CODE class="simpledesc"> <B>.isCascadePERSIST() : boolean</B> </CODE>
 <p class="doc">
-Returns true if the 'cascade type' is 'PERSIST' <br>
+Returns true if the 'cascade options' contains 'PERSIST' <br>
 </p>
 </TD>
 </TR>
 <TR>
 <TD class="doc" ><CODE class="simpledesc"> <B>.isCascadeREFRESH() : boolean</B> </CODE>
 <p class="doc">
-Returns true if the 'cascade type' is 'REFRESH' <br>
+Returns true if the 'cascade options' contains 'REFRESH' <br>
 </p>
 </TD>
 </TR>
 <TR>
 <TD class="doc" ><CODE class="simpledesc"> <B>.isCascadeREMOVE() : boolean</B> </CODE>
 <p class="doc">
-Returns true if the 'cascade type' is 'REMOVE' <br>
+Returns true if the 'cascade options' contains 'REMOVE' <br>
 </p>
 </TD>
 </TR>
@@ -309,7 +310,7 @@ Returns TRUE if the link is the 'Owning Side' of the relationship between 2 enti
 <TR>
 <TD class="doc" ><CODE class="simpledesc"> <B>.isSelected() : boolean</B> </CODE>
 <p class="doc">
-Returns TRUE if the link is selected (ckeckbox ckecked in the GUI)<br>
+Returns TRUE if the link is selected (checkbox checked in the GUI)<br>
 </p>
 </TD>
 </TR>
