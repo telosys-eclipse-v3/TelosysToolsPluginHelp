@@ -81,6 +81,45 @@ Returns the number of attributes defined for this entity<br>
 </TD>
 </TR>
 <TR>
+<TD class="doc" ><CODE class="simpledesc"> <B>.attributesNamesAsString(String separator) : String</B> </CODE>
+<p class="doc">
+Returns all the attributes names as a string.<br>
+The attributes names are separated by the given separator<br>
+<br>
+<b>Parameters : </b><br>
+&nbsp;&nbsp;&nbsp;<b>separator</b> : the separator to be put between each attribute name<br>
+<br>
+<b>Example : </b><br>
+<code>
+&nbsp;&nbsp;&nbsp;$entity.attributesNamesAsString('/') <br>
+</code>
+<br>
+<b>Since : </b>3.0.0<br>
+</p>
+</TD>
+</TR>
+<TR>
+<TD class="doc" ><CODE class="simpledesc"> <B>.attributesNamesAsString(String separator, String prefix, String suffix) : String</B> </CODE>
+<p class="doc">
+Returns all the attributes names as a string.<br>
+The attributes names are separated by the given separator<br>
+with a prefix/suffix for each attribute name<br>
+<br>
+<b>Parameters : </b><br>
+&nbsp;&nbsp;&nbsp;<b>separator</b> : the separator to be put between each attribute name<br>
+&nbsp;&nbsp;&nbsp;<b>prefix</b> : the prefix to be put before each attribute name<br>
+&nbsp;&nbsp;&nbsp;<b>suffix</b> : the prefix to be put after each attribute name<br>
+<br>
+<b>Example : </b><br>
+<code>
+&nbsp;&nbsp;&nbsp;$entity.attributesNamesAsString('/', '{{', '}}') <br>
+</code>
+<br>
+<b>Since : </b>3.0.0<br>
+</p>
+</TD>
+</TR>
+<TR>
 <TD class="doc" ><CODE class="simpledesc"> <B>.autoincrementedKeyAttribute : 'attribute' object</B> </CODE>
 <p class="doc">
 Returns the attribute used as the autoincremented key <br>
@@ -455,6 +494,45 @@ Returns the number of attributes NOT used in the Primary Key for this entity<br>
 </code>
 <br>
 <b>Since : </b>2.0.7<br>
+</p>
+</TD>
+</TR>
+<TR>
+<TD class="doc" ><CODE class="simpledesc"> <B>.nonKeyAttributesNamesAsString(String separator) : String</B> </CODE>
+<p class="doc">
+Returns the 'non key' attributes names as a string.<br>
+The attributes names are separated by the given separator<br>
+<br>
+<b>Parameters : </b><br>
+&nbsp;&nbsp;&nbsp;<b>separator</b> : the separator to be put between each attribute name<br>
+<br>
+<b>Example : </b><br>
+<code>
+&nbsp;&nbsp;&nbsp;$entity.nonKeyAttributesNamesAsString('/') <br>
+</code>
+<br>
+<b>Since : </b>3.0.0<br>
+</p>
+</TD>
+</TR>
+<TR>
+<TD class="doc" ><CODE class="simpledesc"> <B>.nonKeyAttributesNamesAsString(String separator, String prefix, String suffix) : String</B> </CODE>
+<p class="doc">
+Returns the 'non key' attributes names as a string.<br>
+The attributes names are separated by the given separator<br>
+with a prefix/suffix for each attribute name<br>
+<br>
+<b>Parameters : </b><br>
+&nbsp;&nbsp;&nbsp;<b>separator</b> : the separator to be put between each attribute name<br>
+&nbsp;&nbsp;&nbsp;<b>prefix</b> : the prefix to be put before each attribute name<br>
+&nbsp;&nbsp;&nbsp;<b>suffix</b> : the prefix to be put after each attribute name<br>
+<br>
+<b>Example : </b><br>
+<code>
+&nbsp;&nbsp;&nbsp;$entity.nonKeyAttributesNamesAsString('/', '{{', '}}') <br>
+</code>
+<br>
+<b>Since : </b>3.0.0<br>
 </p>
 </TD>
 </TR>

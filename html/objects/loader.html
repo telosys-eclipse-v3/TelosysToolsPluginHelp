@@ -61,11 +61,21 @@ Returns the full file path of the folder where the specific classes are searched
 </TD>
 </TR>
 <TR>
+<TD class="doc" ><CODE class="simpledesc"> <B>.libFolder : String</B> </CODE>
+<p class="doc">
+Returns the full file path of the folder where the specific libraries (jar) are searched by the loader<br>
+<br>
+<b>Since : </b>3.0.0<br>
+</p>
+</TD>
+</TR>
+<TR>
 <TD class="doc" ><CODE class="simpledesc"> <B>.loadClass(String javaClassName) : Class<?></B> </CODE>
 <p class="doc">
 Loads the given java class and return it (no instance created).<br>
 It can be a standard Java class (class of the JDK) or a specific class.<br>
-The specific classes must be located in the 'classes' folder of the templates<br>
+The specific classes must be located in the 'classes' folder (in the templates bundle)<br>
+or in a jar located in the 'lib' folder (in the templates bundle)<br>
 <br>
 <b>Parameters : </b><br>
 &nbsp;&nbsp;&nbsp;<b>javaClassName</b> : the name of the Java class to be loaded<br>
@@ -87,7 +97,8 @@ The specific classes must be located in the 'classes' folder of the templates<br
 <p class="doc">
 Loads the given java class, creates a new instance and return it<br>
 It can be a standard Java class (class of the JDK) or a specific class.<br>
-The specific classes must be located in the 'classes' folder of the templates<br>
+The specific classes must be located in the 'classes' folder (in the templates bundle)<br>
+or in a jar located in the 'lib' folder (in the templates bundle)<br>
 NB : The Java class must have a default constructor (in order to be created by 'javaClass.newInstance()'<br>
 <br>
 <b>Parameters : </b><br>
@@ -105,6 +116,15 @@ NB : The Java class must have a default constructor (in order to be created by '
 </code>
 <br>
 <b>Since : </b>2.1.0<br>
+</p>
+</TD>
+</TR>
+<TR>
+<TD class="doc" ><CODE class="simpledesc"> <B>.uRLs : URL[]</B> </CODE>
+<p class="doc">
+Returns an array containing all the URLs used by the class loader<br>
+<br>
+<b>Since : </b>3.0.0<br>
 </p>
 </TD>
 </TR>

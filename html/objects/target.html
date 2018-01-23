@@ -73,6 +73,25 @@ Returns the output file folder for the generation in progress <br>
 </TD>
 </TR>
 <TR>
+<TD class="doc" ><CODE class="simpledesc"> <B>.forceEntityName(String ?) : String</B> </CODE>
+<p class="doc">
+Forces the entity name (to change dynamically the entity name)<br>
+If a forced name has been defined it will be used as the 'BEANNAME' to build the target file name<br>
+Returns a void string (so that it can be used easily in the template)<br>
+<br>
+<b>Parameters : </b><br>
+&nbsp;&nbsp;&nbsp;<b>?</b> : <br>
+</p>
+</TD>
+</TR>
+<TR>
+<TD class="doc" ><CODE class="simpledesc"> <B>.forcedEntityName : String</B> </CODE>
+<p class="doc">
+Returns the 'forced entity name' (or '' if none)<br>
+</p>
+</TD>
+</TR>
+<TR>
 <TD class="doc" ><CODE class="simpledesc"> <B>.javaPackageFromFolder(String srcFolder) : String</B> </CODE>
 <p class="doc">
 Returns the Java package corresponding to the file path after removing the given source folder <br>
@@ -84,6 +103,14 @@ Returns the Java package corresponding to the file path after removing the given
 <code>
 &nbsp;&nbsp;&nbsp;package ${target.javaPackageFromFolder($SRC)};<br>
 </code>
+</p>
+</TD>
+</TR>
+<TR>
+<TD class="doc" ><CODE class="simpledesc"> <B>.originalFileDefinition : String</B> </CODE>
+<p class="doc">
+Returns the original file definition for the generation in progress <br>
+(the file as defined in the bundle, before variables substitution) <br>
 </p>
 </TD>
 </TR>

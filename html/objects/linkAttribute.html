@@ -41,8 +41,8 @@
 <body>											
 <h1> $linkAttribute</h1>	
 <p class="desc">								
-This object provides a link attribute<br>
-Each link attribute contains the 'origin attibute' and the 'referenced attibute' <br>
+This object provides a pair of link attributes<br>
+Each pair contains the 'origin attibute' and the 'referenced attibute' <br>
 <br>
 <br>
 Since : 2.1.0<br>
@@ -50,9 +50,9 @@ Since : 2.1.0<br>
 <b>Example : </b><br>
 <code>
 &nbsp;&nbsp;&nbsp;<br>
-&nbsp;&nbsp;&nbsp;#foreach( $linkAttribute in $link.attributes )<br>
-&nbsp;&nbsp;&nbsp; from $linkAttribute.originAttribute.name <br>
-&nbsp;&nbsp;&nbsp; to   $linkAttribute.targetAttribute.name <br>
+&nbsp;&nbsp;&nbsp;#foreach( $attributesPair in $link.attributes )<br>
+&nbsp;&nbsp;&nbsp; from $attributesPair.originAttribute.name <br>
+&nbsp;&nbsp;&nbsp; to   $attributesPair.targetAttribute.name <br>
 &nbsp;&nbsp;&nbsp;#end<br>
 </code>
 </p>		
@@ -64,6 +64,7 @@ Since : 2.1.0<br>
 <TD class="doc" ><CODE class="simpledesc"> <B>.originAttribute : AttributeInContext</B> </CODE>
 <p class="doc">
 Returns the link's origin attribute <br>
+The attribute in the 'owning side' of the link (in the FK if any)<br>
 </p>
 </TD>
 </TR>
@@ -71,6 +72,7 @@ Returns the link's origin attribute <br>
 <TD class="doc" ><CODE class="simpledesc"> <B>.targetAttribute : AttributeInContext</B> </CODE>
 <p class="doc">
 Returns the link's target attribute (referenced attribute) <br>
+The attribute in the 'inverse side' of the link <br>
 </p>
 </TD>
 </TR>

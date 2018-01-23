@@ -61,10 +61,31 @@ Returns the 'Bean Validation' JSR-303 annotations for the given field (with a le
 <br>
 <b>Example : </b><br>
 <code>
-&nbsp;&nbsp;&nbsp;$beanValidation.fieldAnnotations( 4, $attribute )<br>
+&nbsp;&nbsp;&nbsp;$beanValidation.annotations( 4, $attribute )<br>
 </code>
 <br>
 <b>Since : </b>2.0.7<br>
+</p>
+</TD>
+</TR>
+<TR>
+<TD class="doc" ><CODE class="simpledesc"> <B>.annotationsForWrapperType(int leftMargin, AttributeInContext attribute) : String</B> </CODE>
+<p class="doc">
+Returns the 'Bean Validation' JSR-303 annotations for the given field (with a left margin)<br>
+The wrapper type is used (instead of the actual field type) to determined the annotations<br>
+e.g. considering the wrapper type, the '@NotNull' annotation is used<br>
+even if the actual field type is a primitive type <br>
+<br>
+<b>Parameters : </b><br>
+&nbsp;&nbsp;&nbsp;<b>leftMargin</b> : the left margin (number of blanks)<br>
+&nbsp;&nbsp;&nbsp;<b>attribute</b> : the attribute to be annotated<br>
+<br>
+<b>Example : </b><br>
+<code>
+&nbsp;&nbsp;&nbsp;$beanValidation.annotationsForWrapperType( 4, $attribute )<br>
+</code>
+<br>
+<b>Since : </b>3.0.0<br>
 </p>
 </TD>
 </TR>

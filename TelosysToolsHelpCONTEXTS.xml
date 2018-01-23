@@ -50,6 +50,7 @@
 		<topic label="$project"         href="html/objects/project.html"/> 
 		<topic label="$target"          href="html/objects/target.html"/> 
 		<topic label="$today"           href="html/objects/today.html"/> 
+		<topic label="$values"          href="html/objects/values.html"/> 
 		
 	</context>
 	

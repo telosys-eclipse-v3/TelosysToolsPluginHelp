@@ -106,6 +106,35 @@ Returns a string containing a list of fields (type and name) separated by a comm
 </TD>
 </TR>
 <TR>
+<TD class="doc" ><CODE class="simpledesc"> <B>.argumentsListWithWrapperType(List fields) : String</B> </CODE>
+<p class="doc">
+Returns a string containing a list of fields (wrapper type and name) separated by a comma<br>
+<br>
+<b>Parameters : </b><br>
+&nbsp;&nbsp;&nbsp;<b>fields</b> : list of fields to be added in the arguments list<br>
+<br>
+<b>Example : </b><br>
+<code>
+&nbsp;&nbsp;&nbsp;$fn.argumentsListWithWrapperType( $entity.attributes )<br>
+&nbsp;&nbsp;&nbsp;Returns : 'Integer id, String firstName, String lastName, Integer age' <br>
+</code>
+<br>
+<b>Since : </b>3.0.0<br>
+</p>
+</TD>
+</TR>
+<TR>
+<TD class="doc" ><CODE class="simpledesc"> <B>.backslash(String s, String c) : String</B> </CODE>
+<p class="doc">
+Protects each occurrence of the given char with a backslash in the given string <br>
+<br>
+<b>Parameters : </b><br>
+&nbsp;&nbsp;&nbsp;<b>s</b> : the string to be processed<br>
+&nbsp;&nbsp;&nbsp;<b>c</b> : the character to be protected with a backslash<br>
+</p>
+</TD>
+</TR>
+<TR>
 <TD class="doc" ><CODE class="simpledesc"> <B>.buildIntValues(Collection collection) : List<Integer></B> </CODE>
 <p class="doc">
 Builds a list of N integer consecutive values starting with 1<br>
@@ -471,6 +500,19 @@ changing the first letter to lower case<br>
 </code>
 <br>
 <b>Since : </b>2.1.0<br>
+</p>
+</TD>
+</TR>
+<TR>
+<TD class="doc" ><CODE class="simpledesc"> <B>.unquote(String s) : String</B> </CODE>
+<p class="doc">
+Removes the double quote character at the beginning and at the end of the given string (if any)<br>
+If the string is not quoted it is returned as is<br>
+If there's a quote character only at the beginning or at the end the string is returned as is<br>
+<br>
+<br>
+<b>Parameters : </b><br>
+&nbsp;&nbsp;&nbsp;<b>s</b> : the string to be unquoted<br>
 </p>
 </TD>
 </TR>

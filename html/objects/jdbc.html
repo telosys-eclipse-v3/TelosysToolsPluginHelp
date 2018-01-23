@@ -68,7 +68,7 @@ All the attributes required to populate the PreparedStatement from a bean instan
 <TR>
 <TD class="doc" ><CODE class="simpledesc"> <B>.attributesForPrimaryKey : List<AttributeInContext></B> </CODE>
 <p class="doc">
-Returns the list of all the attributes of the Primary Key<br>
+Returns the list of all the attributes required for the Primary Key<br>
 <br>
 <br>
 <b>Example : </b><br>
@@ -164,21 +164,6 @@ Returns the JDBC SQL DELETE request<br>
 </TD>
 </TR>
 <TR>
-<TD class="doc" ><CODE class="simpledesc"> <B>.sqlExists : String</B> </CODE>
-<p class="doc">
-Returns the JDBC SQL COUNT request to check existence<br>
-<br>
-<br>
-<b>Example : </b><br>
-<code>
-&nbsp;&nbsp;&nbsp;$jdbc.sqlExists<br>
-</code>
-<br>
-<b>Since : </b>2.1.1<br>
-</p>
-</TD>
-</TR>
-<TR>
 <TD class="doc" ><CODE class="simpledesc"> <B>.sqlInsert : String</B> </CODE>
 <p class="doc">
 Returns the JDBC SQL INSERT request<br>
@@ -196,7 +181,7 @@ Returns the JDBC SQL INSERT request<br>
 <TR>
 <TD class="doc" ><CODE class="simpledesc"> <B>.sqlSelect : String</B> </CODE>
 <p class="doc">
-Returns the JDBC SQL SELECT request<br>
+Returns the JDBC SQL 'SELECT xxx FROM xxx' request<br>
 <br>
 <br>
 <b>Example : </b><br>
@@ -204,7 +189,52 @@ Returns the JDBC SQL SELECT request<br>
 &nbsp;&nbsp;&nbsp;$jdbc.sqlSelect<br>
 </code>
 <br>
-<b>Since : </b>2.1.1<br>
+<b>Since : </b>3.0.0<br>
+</p>
+</TD>
+</TR>
+<TR>
+<TD class="doc" ><CODE class="simpledesc"> <B>.sqlSelectCount : String</B> </CODE>
+<p class="doc">
+Returns the JDBC SQL 'SELECT COUNT(*) FROM xxx' request <br>
+<br>
+<br>
+<b>Example : </b><br>
+<code>
+&nbsp;&nbsp;&nbsp;$jdbc.sqlSelectCount<br>
+</code>
+<br>
+<b>Since : </b>3.0.0<br>
+</p>
+</TD>
+</TR>
+<TR>
+<TD class="doc" ><CODE class="simpledesc"> <B>.sqlSelectCountWherePK : String</B> </CODE>
+<p class="doc">
+Returns the JDBC SQL 'SELECT COUNT(*) FROM xxx WHERE pk = xxx' request <br>
+Can be used to check the existence of a record for the given PK<br>
+<br>
+<b>Example : </b><br>
+<code>
+&nbsp;&nbsp;&nbsp;$jdbc.sqlSelectCountWherePK<br>
+</code>
+<br>
+<b>Since : </b>3.0.0<br>
+</p>
+</TD>
+</TR>
+<TR>
+<TD class="doc" ><CODE class="simpledesc"> <B>.sqlSelectWherePK : String</B> </CODE>
+<p class="doc">
+Returns the JDBC SQL 'SELECT xxx FROM xxx WHERE pk = xxx' request<br>
+<br>
+<br>
+<b>Example : </b><br>
+<code>
+&nbsp;&nbsp;&nbsp;$jdbc.sqlSelectWherePK<br>
+</code>
+<br>
+<b>Since : </b>3.0.0<br>
 </p>
 </TD>
 </TR>
