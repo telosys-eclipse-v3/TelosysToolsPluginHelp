@@ -7,35 +7,38 @@
 
 <body>
 <h1>Templates Language</h1>
+
 <p>
 The code generation is based on "templates"<br>
 A template is a file with a <b>".vm"</b> extension written in <b>"Velocity Template Language"</b><br>
-<b>Velocity</b> is a well known Open Source template engine ( cf <a href="http://velocity.apache.org/" >http://velocity.apache.org/</a> )
-</p>
-
-<p>
-You need a template file for each artifact you want to generate ( Java class, HTML file, etc... )<br>
-You can update existing templates or create new templates according to your needs.
-</p>
-
-<p>
-The <b>Velocity engine</b> used in Telosys Tools is <b>version 1.7</b> 
 <br>
-The main aspects of the Velocity Templates Language (VTL) are documented here :
+<b>Velocity</b> is a well known Open Source template engine ( cf <a href="http://velocity.apache.org/" >http://velocity.apache.org/</a> )<br>
+The <b>Velocity engine</b> used in Telosys Tools is <b>version 1.7</b> <br>
+<br>
+The main elements of the Velocity Templates Language (VTL) are documented below.
+</p>
+
+
+<h3>Velocity standard syntax and directives</h3> 
+
 <ul>
-<li> <a href="velocity/assertfalse.html">#assertFalse</a></li>
-<li> <a href="velocity/asserttrue.html">#assertTrue</a></li>
-<li> <a href="velocity/checkid.html">#checkId</a></li>
-<li> <a href="velocity/error.html">#error</a></li>
 <li> <a href="velocity/foreach.html">#foreach</a></li>
 <li> <a href="velocity/if.html">#if</a></li>
 <li> <a href="velocity/include.html">#include</a></li>
 <li> <a href="velocity/macro.html">#macro</a></li>
 <li> <a href="velocity/parse.html">#parse</a></li>
 <li> <a href="velocity/set.html">#set</a></li>
-<li> <a href="velocity/using.html">#using</a></li>
 <li> <a href="velocity/comments.html">comments</a></li>
 <li> <a href="velocity/unparsed.html">unparsed content</a></li>
+</ul> 
+
+<h3>Telosys specific directives</h3> 
+<ul>
+<li> <a href="velocity/assertfalse.html">#assertFalse</a></li>
+<li> <a href="velocity/asserttrue.html">#assertTrue</a></li>
+<li> <a href="velocity/checkid.html">#checkId</a></li>
+<li> <a href="velocity/error.html">#error</a></li>
+<li> <a href="velocity/using.html">#using</a></li>
 </ul> 
 <br>
 For more information about the Velocity Templates Language (VTL) see the official web site :
@@ -43,7 +46,6 @@ For more information about the Velocity Templates Language (VTL) see the officia
 <li> <a href="http://velocity.apache.org/engine/releases/velocity-1.7/user-guide.html" > User guide </a> </li>
 <li> <a href="http://velocity.apache.org/engine/releases/velocity-1.7/vtl-reference-guide.html" > Reference guide </a> </li>
 </ul>
-</p>
 
 </body>
 </html>
