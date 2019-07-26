@@ -3,12 +3,15 @@
 -- How to update the generator context object
 --------------------------------------------------------------------------------------------------
 
- 1) Update Java dependencies (use the last version of TelosysTools jar files )
+ 1) Update Java library dependencies (use the last version of TelosysTools jar file )
+    ( Telosys library is required for 'DocGeneratorLaunche.java' ) :
 
-   Update ANT file : build_copy_jars.xml
-   Copy JARs
-   Update project's referenced libraries
-
+   Just change the library in 'Build Path' (copy jars is no longer useful )
+   project 'Build Path' : 
+         . remove old lib
+         . add new lib with 'Add JARs...' : 
+           use the library located in the 'TelosysToolsPlugin' project 
+           ( e.g. 'TelosysToolsPlugin/lib/telosys-tools-all-X.X.X.jar' )
 
  2) Generate the HTML files
 
