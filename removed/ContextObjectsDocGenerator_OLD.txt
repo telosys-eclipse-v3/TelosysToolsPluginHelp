@@ -1,17 +1,17 @@
 
 --------------------------------------------------------------------------------------------------
--- How to update the generator context object : folder "html/objects"
+-- How to update the generator context object
 --------------------------------------------------------------------------------------------------
 
- 1) Update Java library dependencies (use the last version of TelosysTools jar file )
-    ( Telosys library is required for 'DocGeneratorLaunche.java' ) :
+ 1) Update Java dependencies (use the last version of TelosysTools jar files )
 
-   Just change the library in 'Build Path' (copy jars is no longer useful )
-   project 'Build Path' : 
-         . remove old lib
-         . add new lib with 'Add JARs...' : 
-           use the library located in the 'TelosysToolsPlugin' project 
-           ( e.g. 'TelosysToolsPlugin/lib/telosys-tools-all-X.X.X.jar' )
+   Update ANT file : build_copy_jars.xml
+       Change property name="VERSION"  ( or copy 'build_copy_jars.xml' from 'TelosysToolsPlugin' )
+   Copy JARs ( run ant build )
+   
+   Update project's referenced libraries (required for 'DocGeneratorLaunche.java' ):
+       project 'Build Path' : remove old lib, add new lib with 'Add JARs...'
+
 
  2) Generate the HTML files
 
@@ -27,7 +27,7 @@
   . TelosysToolsHelpTOC.xml
  
 --------------------------------------------------------------------------------------------------
--- How to update the generator directives : folder "html/velocity"
+-- How to update the generator directives
 --------------------------------------------------------------------------------------------------
 
  The directive documentation must be edited by hand
