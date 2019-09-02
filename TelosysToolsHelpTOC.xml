@@ -3,7 +3,7 @@
 
 <toc label="Telosys Documentation  ( - TELOSYS - )" >
 
-	<topic label="Telosys templates : Language"  href="html/templates-language.html"> 
+	<topic label="Telosys templates : Language"  href="html/doc-velocity.html"> 
 	
 		<topic label="#assertFalse"     href="html/velocity/assertfalse.html"/>
 		<topic label="#assertTrue"      href="html/velocity/asserttrue.html"/>
@@ -24,7 +24,7 @@
 		
 	</topic>
 	
-	<topic label="Telosys templates : Objects"  href="html/templates-objects.html"> 
+	<topic label="Telosys templates : Objects"  href="html/doc-objects.html"> 
 		<topic label="$attribute"       href="html/objects/attribute.html"/> 
 		<topic label="$beanValidation"  href="html/objects/beanValidation.html"/> 
 		<topic label="$const"           href="html/objects/const.html"/> 
