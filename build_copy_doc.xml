@@ -1,0 +1,23 @@
+<project default="copy-doc">
+
+	<property name="origin_dir"    value="../../wks-46-telosys-tools-bricks/telosys-doc/html" />
+	<property name="target_dir"    value="./html" />
+
+	<!-- ============================================================================== -->
+
+	<target name="copy-doc" >
+		<echo message="Delete existing doc files " />
+		<!--
+		<delete>
+			<fileset dir="${target_dir}" includes="*.html"/>
+		</delete>
+		-->
+		<delete dir="${target_dir}"/>
+		
+		<echo message="Copy doc files from 'telosys-doc' to current project" />
+		<copy todir="${target_dir}" >  
+		    <fileset dir="${origin_dir}" includes="**"/>  
+		</copy> 		
+	</target>
+
+</project>
