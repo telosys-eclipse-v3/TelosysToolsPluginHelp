@@ -1,11 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <contexts>
 
-	<context id="VelocityEditorHelp"> <!-- Help context called by Velocity Editor  -->
-   		<description>Template editor : directives and objects </description>
+	<context id="VelocityEditorHelp"> <!-- Help context called by Velocity Editor ( F1 Key ) -->
+	
+<description>
+Telosys editor designed to create or customize templates for code generation.
+
+For help see documentation links below... 
+</description>
+
+		<topic label="Telosys templating language (Velocity)"   href="html/doc-velocity.html"/>
+		<topic label="Telosys objects usable in templates"      href="html/doc-objects.html" /> 
+		<topic label="Target languages specificities"           href="html/doc-languages.html" /> 
+		
+		
+		
    		
    		<!-- Context topics ( subpart of the topics defined in the full TOC Help ) --> 
    		<!-- sub-topics are not allowed in context -->
+   	<!--
 		<topic label="#assertFalse"     href="html/velocity/assertfalse.html"/>
 		<topic label="#assertTrue"      href="html/velocity/asserttrue.html"/>
 		<topic label="#error"           href="html/velocity/error.html"/>
@@ -51,7 +64,7 @@
 		<topic label="$target"          href="html/objects/target.html"/> 
 		<topic label="$today"           href="html/objects/today.html"/> 
 		<topic label="$values"          href="html/objects/values.html"/> 
-		
+	-->
 	</context>
 	
 	<context id="otherHelp"> <!-- Other context (not used) -->

@@ -9,6 +9,7 @@
  
  
  2) Copy "html" folder from "telosys-bricks/telosys-doc" to this project
+    With ant script 
 
 
  3) If necessary update Eclipse specific ".xml" files referencing the generated files 

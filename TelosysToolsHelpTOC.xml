@@ -3,7 +3,7 @@
 
 <toc label="Telosys Documentation  ( - TELOSYS - )" >
 
-	<topic label="Telosys templates : Language"  href="html/doc-velocity.html"> 
+	<topic label="Telosys templating language (Velocity)"  href="html/doc-velocity.html"> 
 	
 		<topic label="#assertFalse"     href="html/velocity/assertfalse.html"/>
 		<topic label="#assertTrue"      href="html/velocity/asserttrue.html"/>
@@ -24,7 +24,7 @@
 		
 	</topic>
 	
-	<topic label="Telosys templates : Objects"  href="html/doc-objects.html"> 
+	<topic label="Telosys objects usable in templates"  href="html/doc-objects.html"> 
 		<topic label="$attribute"       href="html/objects/attribute.html"/> 
 		<topic label="$beanValidation"  href="html/objects/beanValidation.html"/> 
 		<topic label="$const"           href="html/objects/const.html"/> 
@@ -52,6 +52,16 @@
 		<topic label="$target"          href="html/objects/target.html"/> 
 		<topic label="$today"           href="html/objects/today.html"/> 
 		<topic label="$values"          href="html/objects/values.html"/> 
+	</topic>
+
+	<topic label="Target languages specificities"  href="html/doc-languages.html"> 
+		<topic label="C# (Microsoft CSharp)"  href="html/languages/language-csharp.html"/> 
+		<topic label="Go (Golang)"            href="html/languages/language-go.html"/> 
+		<topic label="Java"                   href="html/languages/language-java.html"/>
+		<topic label="JavaScript"             href="html/languages/language-javascript.html"/> 
+		<topic label="PHP"                    href="html/languages/language-php.html"/> 
+		<topic label="Python"                 href="html/languages/language-python.html"/> 
+		<topic label="TypeScript"             href="html/languages/language-typescript.html"/> 
 	</topic>
 	
 </toc>
