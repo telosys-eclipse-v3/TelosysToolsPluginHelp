@@ -27,13 +27,16 @@
 	<topic label="Telosys objects usable in templates"  href="html/doc-objects.html"> 
 		<topic label="$attribute"       href="html/objects/attribute.html"/> 
 		<topic label="$beanValidation"  href="html/objects/beanValidation.html"/> 
+		<topic label="$bundle"          href="html/objects/bundle.html"/> 
 		<topic label="$const"           href="html/objects/const.html"/> 
 		<topic label="$database"        href="html/objects/database.html"/> 
 		<topic label="$databases"       href="html/objects/databases.html"/> 
 		<topic label="$entity"          href="html/objects/entity.html"/> 
 		<topic label="$env"             href="html/objects/env.html"/> 
+		<topic label="$file"            href="html/objects/file.html"/> 
 		<topic label="$fk"              href="html/objects/fk.html"/> 
 		<topic label="$fkcol"           href="html/objects/fkcol.html"/> 
+		<topic label="$fkPart"          href="html/objects/fkPart.html"/> 
 		<topic label="$fn"              href="html/objects/fn.html"/> 
 		<topic label="$generation"      href="html/objects/generation.html"/> 
 		<topic label="$generator"       href="html/objects/generator.html"/> 
@@ -43,11 +46,13 @@
 		<topic label="$jdbc"            href="html/objects/jdbc.html"/> 
 		<topic label="$jdbcFactory"     href="html/objects/jdbcFactory.html"/> 
 		<topic label="$joinColumn"      href="html/objects/joinColumn.html"/> 
+		<topic label="$joinTable"       href="html/objects/joinTable.html"/> 
 		<topic label="$jpa"             href="html/objects/jpa.html"/> 
 		<topic label="$link"            href="html/objects/link.html"/> 
 		<topic label="$linkAttribute"   href="html/objects/linkAttribute.html"/> 
 		<topic label="$loader"          href="html/objects/loader.html"/> 
 		<topic label="$model"           href="html/objects/model.html"/> 
+		<topic label="$now"             href="html/objects/now.html"/> 
 		<topic label="$project"         href="html/objects/project.html"/> 
 		<topic label="$target"          href="html/objects/target.html"/> 
 		<topic label="$today"           href="html/objects/today.html"/> 
@@ -55,12 +60,14 @@
 	</topic>
 
 	<topic label="Target languages specificities"  href="html/doc-languages.html"> 
+		<topic label="C++"                    href="html/languages/language-cpp.html"/> 
 		<topic label="C# (Microsoft CSharp)"  href="html/languages/language-csharp.html"/> 
 		<topic label="Go (Golang)"            href="html/languages/language-go.html"/> 
 		<topic label="Java"                   href="html/languages/language-java.html"/>
 		<topic label="JavaScript"             href="html/languages/language-javascript.html"/> 
 		<topic label="PHP"                    href="html/languages/language-php.html"/> 
 		<topic label="Python"                 href="html/languages/language-python.html"/> 
+		<topic label="Scala"                  href="html/languages/language-scala.html"/> 
 		<topic label="TypeScript"             href="html/languages/language-typescript.html"/> 
 	</topic>
 	

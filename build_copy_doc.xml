@@ -1,6 +1,9 @@
 <project default="copy-doc">
 
+	<!--
 	<property name="origin_dir"    value="../../wks-46-telosys-tools-bricks/telosys-doc/html" />
+	-->
+	<property name="origin_dir"    value="../../wks-46-telosys-tools-bricks/telosys-doc/doc/v330" />
 	<property name="target_dir"    value="./html" />
 
 	<!-- ============================================================================== -->

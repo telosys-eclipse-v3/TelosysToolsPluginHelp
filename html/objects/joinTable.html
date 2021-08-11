@@ -2,26 +2,26 @@
 <html>
 <head>
  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
- <title> $linkAttribute</title>
+ <title> $joinTable</title>
  <style type="text/css">
  h1 {   font-size:28px;   font-family: verdana; }  p.otherNames {    font-size:14px;    font-family: verdana; }  p.desc {    font-size:12px;    font-family: verdana;  }  p.doc {    margin-left:2cm;  }  td.doc {    font-size:12px;    font-family: verdana;    vertical-align:text-top;    padding-top: 6px;    padding-bottom: 12px;  } tr.title {   font-family: verdana;   font-size:20px;   font-weight:bold;   background-color: #CCCCFF ; } code.example {   font-size:14px; } code.simpledesc {   font-size:15px;   color: #000099; }
  </style>
 </head>
 <body>
-<h1> $linkAttribute</h1>
+<h1> $joinTable</h1>
 <p class="desc"> ( documentation for Telosys generator version 3.3.0 ) </p>
 <hr>
 <p class="desc">
-This object provides a pair of link attributes<br>
-Each pair contains the 'origin attibute' and the 'referenced attibute' <br>
+This object provides the description of a 'join table' <br>
 <br>
 <br>
 <b>Example : </b><br>
 <code class="example">
 &nbsp;&nbsp;&nbsp;<br>
-&nbsp;&nbsp;&nbsp;#foreach( $attributesPair in $link.attributes )<br>
-&nbsp;&nbsp;&nbsp; from $attributesPair.originAttribute.name <br>
-&nbsp;&nbsp;&nbsp; to   $attributesPair.targetAttribute.name <br>
+&nbsp;&nbsp;&nbsp;#if ( $link.hasJoinTable() )<br>
+&nbsp;&nbsp;&nbsp;#set($joinTable = $link.joinTable)<br>
+&nbsp;&nbsp;&nbsp; name   : $joinTable.name<br>
+&nbsp;&nbsp;&nbsp; schema : $joinTable.schema<br>
 &nbsp;&nbsp;&nbsp;#end<br>
 </code>
 <br>
@@ -32,18 +32,37 @@ Since : 2.1.0<br>
   <TD>Attributes and methods</TD>
 </TR>
 <TR>
-<TD class="doc" ><CODE class="simpledesc"> <B>.originAttribute : AttributeInContext</B> </CODE>
+<TD class="doc" ><CODE class="simpledesc"> <B>.catalog : String</B> </CODE>
 <p class="doc">
-Returns the link's origin attribute <br>
-The attribute in the 'owning side' of the link (in the FK if any)<br>
+Returns the table catalog if any <br>
 </p>
 </TD>
 </TR>
 <TR>
-<TD class="doc" ><CODE class="simpledesc"> <B>.targetAttribute : AttributeInContext</B> </CODE>
+<TD class="doc" ><CODE class="simpledesc"> <B>.inverseJoinColumns : List<JoinColumnInContext></B> </CODE>
 <p class="doc">
-Returns the link's target attribute (referenced attribute) <br>
-The attribute in the 'inverse side' of the link <br>
+Returns the inverse join columns<br>
+</p>
+</TD>
+</TR>
+<TR>
+<TD class="doc" ><CODE class="simpledesc"> <B>.joinColumns : List<JoinColumnInContext></B> </CODE>
+<p class="doc">
+Returns the join columns<br>
+</p>
+</TD>
+</TR>
+<TR>
+<TD class="doc" ><CODE class="simpledesc"> <B>.name : String</B> </CODE>
+<p class="doc">
+Returns the table name <br>
+</p>
+</TD>
+</TR>
+<TR>
+<TD class="doc" ><CODE class="simpledesc"> <B>.schema : String</B> </CODE>
+<p class="doc">
+Returns the table schema if any<br>
 </p>
 </TD>
 </TR>

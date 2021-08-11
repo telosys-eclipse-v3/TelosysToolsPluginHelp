@@ -9,7 +9,8 @@
  
  
  2) Copy "html" folder from "telosys-bricks/telosys-doc" to this project
-    With ant script 
+    Adapt ANT script "build_copy_doc.xml" : change version for "origin_dir" 
+    Run ANT script  
 
 
  3) If necessary update Eclipse specific ".xml" files referencing the generated files 
