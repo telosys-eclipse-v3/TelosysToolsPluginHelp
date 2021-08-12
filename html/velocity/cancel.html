@@ -1,0 +1,69 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">		
+<html>								
+<head>								
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">	
+	<title> #cancel </title>	
+	<style type="text/css">		
+	h1 {							
+		font-size:28px;				
+		font-family: verdana		
+	}								
+	p.otherNames{					
+		font-size:20px;				
+		font-family: verdana;		
+	}								
+	p.desc {						
+		font-size:12px;				
+		font-family: verdana;		
+	}								
+	p.doc {							
+		margin-left:2cm;			
+	}								
+	td.doc {						
+		font-size:12px;				
+		font-family: verdana;		
+		vertical-align:text-top;	
+		padding-top: 6px;			
+		padding-bottom: 12px;		
+	}								
+	tr.title {						
+		font-family: verdana;		
+		font-size:20px;				
+		font-weight:bold;			
+		background-color: #CCCCFF ;	
+	}								
+	code.simpledesc {				
+		font-size:15px;				
+		color: #000099; 			
+	}								
+	</style>						
+</head>							
+<body>					
+						
+<h1> #cancel </h1>	
+<p class="desc">								
+<strong>( specific directive - since version 3.3.0 )</strong><br>
+<br>
+Cancels the current generation. <br>
+When "#cancel" is used in a template the target file is not generated. <br>
+This directive is useful when certain entities are not supposed to be generated. <br>
+A cancellation is not considered as an error (no reported in errors).<br>
+<br>
+This directive has only one argument: a message to indicate why the generation was canceled <br>
+<br>
+<b>Examples : </b><br>
+<br>
+<code>
+&nbsp;&nbsp;&nbsp; #cancel( "cancellation reason" ) <br>
+<br>
+&nbsp;&nbsp;&nbsp; #if ( $entity.name.startsWith("Tmp") ) <br>
+&nbsp;&nbsp;&nbsp; #cancel("No class for this entity") <br>
+&nbsp;&nbsp;&nbsp; #end <br>
+<br>
+<br>
+</code>
+</p>		
+<br>
+<br>
+</body>
+</html>

@@ -3,20 +3,19 @@
 
 <toc label="Telosys Documentation  ( - TELOSYS - )" >
 
-	<topic label="Telosys templating language (Velocity)"  href="html/doc-velocity.html"> 
+	<topic label="Telosys templates language (Velocity)"  href="html/doc-velocity.html"> 
 	
 		<topic label="#assertFalse"     href="html/velocity/assertfalse.html"/>
 		<topic label="#assertTrue"      href="html/velocity/asserttrue.html"/>
 		<topic label="#error"           href="html/velocity/error.html"/>
+		<topic label="#cancel"          href="html/velocity/cancel.html"/>
 		<topic label="#checkId"         href="html/velocity/checkid.html"/>
-		 
 		<topic label="#foreach"         href="html/velocity/foreach.html"/> 
 		<topic label="#if"              href="html/velocity/if.html"/> 
 		<topic label="#include"         href="html/velocity/include.html"/> 
 		<topic label="#macro"           href="html/velocity/macro.html"/> 
 		<topic label="#parse"           href="html/velocity/parse.html"/> 
 		<topic label="#set"             href="html/velocity/set.html"/> 
-
 		<topic label="#using"           href="html/velocity/using.html"/>
 
 		<topic label="comments"         href="html/velocity/comments.html"/> 
